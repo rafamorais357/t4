@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rafael Pereira Morais - Currículo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Classes de botão - simplificação para gestão do estado */
+    .tab-inactive {
+      background-color: #e5e7eb; /* cinza */
+      color: #1f2937; /* cinza escuro */
+    }
+    .tab-active {
+      background-color: #3b82f6; /* azul */
+      color: white;
+    }
+
+    /* Ajuste de vídeo */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* Proporção 16:9 */
+      height: 0;
+      overflow: hidden;
+      width: 100%;
+      max-width: 600px; /* Tamanho fixo para desktop */
+      margin: 0 auto;
+    }
+
+    /* Responsividade */
+    @media (max-width: 640px) {
+      .video-container {
+        max-width: 100%; /* No mobile o vídeo ocupa toda a largura */
+      }
+    }
+
+    /* Ajustes para a seção do herói */
+    .hero-section {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    @media (max-width: 640px) {
+      .hero-section {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-white text-gray-800 font-sans">
+
+  <!-- Hero Section -->
+  <section class="bg-gray-900 hero-section text-center">
+    <h1 class="text-3xl sm:text-4xl font-bold mb-2 text-white">Rafael Pereira Morais</h1>
+    <p class="text-base sm:text-lg mb-6 text-gray-300">Fotógrafo | Criador de Conteúdo | Profissional Multidisciplinar</p>
+    
+    <!-- Vídeo incorporado responsivo -->
+    <div class="video-container mb-6">
+      <iframe src="https://www.youtube.com/embed/kAXgIQwieMA" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen 
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+      </iframe>
+    </div>
+
+    <div class="flex justify-center flex-col items-center gap-4">
+      <a href="https://www.youtube.com/watch?v=bXazWD5R3d4" target="_blank" class="mt-4 inline-block bg-blue-500 text-white px-6 py-2 rounded-xl shadow-md hover:bg-blue-600 transition duration-200">
+        Assistir Vídeo de Apresentação
+      </a>
+    </div>
+  </section>
+
+  <!-- Perfil Profissional -->
+  <section class="px-4 sm:px-6 py-10 max-w-4xl mx-auto">
+    <h2 class="text-xl sm:text-2xl font-semibold mb-4 text-gray-900">Breve Descrição</h2>
+    <p class="mb-6 text-gray-700 text-sm sm:text-base">
+      Sou um profissional versátil com mais de 10 anos de experiência em fotografia, produção audiovisual e marketing digital. Forte atuação em vendas, gestão de redes sociais e atendimento ao público. Possuo vivência no Exército Brasileiro, com destaque em produção de conteúdo institucional, além de ampla experiência em atividades operacionais e de liderança em campo. Sou comunicativo, organizado e com excelente capacidade de adaptação — qualidades que me tornam apto a atuar em diversos ambientes e desafios. Tenho facilidade com tecnologia, IA e ferramentas de edição. Atualmente, também me dedico à escrita como forma de desenvolver minha criatividade e sensibilidade artística.
+    </p>
+
+    <!-- Contato -->
+    <ul class="mb-10 text-gray-700 text-sm sm:text-base space-y-1">
+      <li><strong>Local:</strong> Caxambu – MG | Disponibilidade de locomoção e mudança de cidade</li>
+      <li><strong>Email:</strong> rfmoraisfotografia@gmail.com</li>
+      <li><strong>Telefone:</strong> <a href="https://wa.me/+5535910038243" target="_blank" class="text-blue-600 hover:underline">(35) 91003-8243</a></li>
+      <li><strong>Instagram:</strong> <a href="https://www.instagram.com/rafamoraisfotografia" target="_blank" class="text-blue-600 hover:underline">@rafamoraisfotografia</a></li>
+    </ul>
+
+    <hr class="border-t-2 border-gray-300 mb-10" />
+
+    <!-- Tabs -->
+    <div class="flex flex-col sm:flex-row gap-4 mb-10">
+      <button onclick="showTab('experiencia', event)" class="tab-btn w-full sm:w-auto px-4 py-2 rounded-full transition duration-200 tab-active">Experiência Profissional</button>
+      <button onclick="showTab('formacao', event)" class="tab-btn w-full sm:w-auto px-4 py-2 rounded-full transition duration-200 tab-inactive">Formação & Habilidades</button>
+      <button onclick="showTab('informacoes', event)" class="tab-btn w-full sm:w-auto px-4 py-2 rounded-full transition duration-200 tab-inactive">Informações Adicionais</button>
+    </div>
+
+    <!-- Conteúdo das Abas -->
+    <div id="experiencia" class="tab-content">
+      <h2 class="text-xl sm:text-2xl font-semibold mb-4 text-gray-900">Experiência Profissional</h2>
+      <ul class="space-y-6 text-gray-700 text-sm sm:text-base">
+        <li>
+          <h3 class="text-lg sm:text-xl font-bold">Fotógrafo e Criador de Conteúdo | Autônomo (2013 – Atual)</h3>
+          <ul class="list-disc list-inside">
+            <li>Ensaios fotográficos comerciais e cobertura de eventos.</li>
+            <li>Criação de vídeos e campanhas para redes sociais.</li>
+            <li>Estudo de tendências e ferramentas de IA.</li>
+          </ul>
+        </li>
+        <li>
+          <h3 class="text-lg sm:text-xl font-bold">Exército Brasileiro – ESA (2013 – 2015)</h3>
+          <ul class="list-disc list-inside">
+            <li>Produção de conteúdo institucional e coberturas de eventos como fotógrafo e videomaker.</li>
+            <li>Atuação como telefonista em regime de escala de serviço.</li>
+            <li>Recebimento de certificado de honra ao mérito.</li>
+          </ul>
+        </li>
+        <li>
+          <h3 class="text-lg sm:text-xl font-bold">Fazenda Santa Rita – Terreirista (Safras: 2020 a 2024)</h3>
+          <ul class="list-disc list-inside">
+            <li>Gestão de equipe e coordenação do pós-colheita.</li>
+            <li>Responsável pelo controle financeiro e pagamentos da equipe sazonal.</li>
+            <li>Responsável pela implementação de novas tecnologias na empresa.</li>
+            <li>Bônus e elogios por desempenho e eficiência.</li>
+          </ul>
+        </li>
+        <li>
+          <h3 class="text-lg sm:text-xl font-bold">Fazendas Oliveira e Passagem – Retireiro (2018 – 2020)</h3>
+          <ul class="list-disc list-inside">
+            <li>Ordenha, trato e controle de produção de leite.</li>
+            <li>Operação de tratores e estoque de ração.</li>
+            <li>Responsável pela implementação de novas tecnologias na empresa.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div id="formacao" class="tab-content hidden">
+      <h2 class="text-xl sm:text-2xl font-semibold mb-4 text-gray-900">Formação Acadêmica & Cursos</h2>
+      <p><strong>Ensino Médio:</strong> Escola Estadual Nossa Senhora de Montserrat (2011)</p>
+      <br />
+      <p><strong>Cursos:</strong> Marketing e Vendas, Pacote Office, Photoshop, Lightroom, Canva, CapCut, ChatGPT</p>
+      <br />
+      <p><strong>Idiomas:</strong> 🇪🇸 Espanhol (Intermediário), 🇺🇸 Inglês (Iniciante)</p>
+      <br />
+      <h2 class="text-xl sm:text-2xl font-semibold mb-4 text-gray-900">Competências</h2>
+      <ul class="list-disc list-inside grid grid-cols-1 sm:grid-cols-2 gap-x-6">
+        <li>Comunicação</li>
+        <li>Liderança</li>
+        <li>Organização</li>
+        <li>Inteligência Emocional</li>
+        <li>Trabalho em Equipe</li>
+        <li>Serviços Manuais</li>
+        <li>Criatividade</li>
+        <li>Proatividade</li>
+      </ul>
+    </div>
+
+    <div id="informacoes" class="tab-content hidden">
+      <h2 class="text-xl sm:text-2xl font-semibold mb-4 text-gray-900">Informações Adicionais</h2>
+      <ul class="list-disc list-inside text-gray-700 text-sm sm:text-base">
+        <li>CNH Categoria B</li>
+        <li>Disponibilidade para mudança de cidade</li>
+        <li>Facilidade com ferramentas tecnológicas e digitais</li>
+        <li>Vivência com Inteligência Artificial aplicada à criação de conteúdo</li>
+        <li>Experiência com gestão financeira básica</li>
+        <li>Interesse contínuo por aprendizado e desenvolvimento pessoal</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-gray-900 text-gray-300 text-center py-6 px-4 sm:px-0">
+    <p class="text-sm sm:text-base">© <span id="year"></span> Rafael Pereira Morais. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Script para tabs -->
+  <script>
+    function showTab(tab, event) {
+      // Esconde todas as abas
+      document.querySelectorAll('.tab-content').forEach(div => {
+        div.classList.add('hidden');
+      });
+      
+      // Mostra a aba clicada
+      document.getElementById(tab).classList.remove('hidden');
+
+      // Remove a classe de "ativo" de todos os botões
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('tab-active');
+        btn.classList.add('tab-inactive');
+      });
+
+      // Marca o botão clicado como "ativo"
+      event.target.classList.remove('tab-inactive');
+      event.target.classList.add('tab-active');
+    }
+  </script>
+</body>
+</html>
