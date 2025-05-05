@@ -15,64 +15,19 @@
       background-color: #3b82f6; /* azul */
       color: white;
     }
-
-    /* Ajuste de vídeo */
-    .video-container {
-      position: relative;
-      padding-bottom: 56.25%; /* Proporção 16:9 */
-      height: 0;
-      overflow: hidden;
-      width: 100%;
-      max-width: 600px; /* Tamanho fixo para desktop */
-      margin: 0 auto;
-    }
-
-    /* Responsividade */
-    @media (max-width: 640px) {
-      .video-container {
-        max-width: 100%; /* No mobile o vídeo ocupa toda a largura */
-      }
-    }
-
-    /* Ajustes para a seção do herói */
-    .hero-section {
-      padding-top: 5rem;
-      padding-bottom: 5rem;
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
-
-    @media (max-width: 640px) {
-      .hero-section {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-      }
-    }
   </style>
 </head>
 <body class="min-h-screen bg-white text-gray-800 font-sans">
 
   <!-- Hero Section -->
-  <section class="bg-gray-900 hero-section text-center">
+  <section class="bg-gray-900 py-12 px-4 sm:px-6 text-center">
     <h1 class="text-3xl sm:text-4xl font-bold mb-2 text-white">Rafael Pereira Morais</h1>
     <p class="text-base sm:text-lg mb-6 text-gray-300">Fotógrafo | Criador de Conteúdo | Profissional Multidisciplinar</p>
-    
-    <!-- Vídeo incorporado responsivo -->
-    <div class="video-container mb-6">
-      <iframe src="https://www.youtube.com/embed/kAXgIQwieMA" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowfullscreen 
-              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-      </iframe>
-    </div>
-
     <div class="flex justify-center flex-col items-center gap-4">
       <a href="https://www.youtube.com/watch?v=bXazWD5R3d4" target="_blank" class="mt-4 inline-block bg-blue-500 text-white px-6 py-2 rounded-xl shadow-md hover:bg-blue-600 transition duration-200">
         Assistir Vídeo de Apresentação
       </a>
+      <iframe class="w-full max-w-xl aspect-video rounded-xl shadow-lg" src="https://www.youtube.com/embed/kAXgIQwieMA" title="YouTube video" frameborder="0" allowfullscreen></iframe>
     </div>
   </section>
 
@@ -186,7 +141,7 @@
       document.querySelectorAll('.tab-content').forEach(div => {
         div.classList.add('hidden');
       });
-      
+
       // Mostra a aba clicada
       document.getElementById(tab).classList.remove('hidden');
 
@@ -200,6 +155,10 @@
       event.target.classList.remove('tab-inactive');
       event.target.classList.add('tab-active');
     }
+
+    // Atualiza o ano automaticamente no rodapé
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
+
